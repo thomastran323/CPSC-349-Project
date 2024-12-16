@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Portfolio - Projects</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="brand">Thomas</a>
+                <div class="burger" id="burger">
+                   <span class="burger-line"></span>
+                   <span class="burger-line"></span>
+                   <span class="burger-line"></span>
+                </div>
+                <div class="menu" id="menu">
+                   <ul class="menu-inner">
+                      <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
+                      <li class="menu-item"><a href="about.html" class="menu-link">About Me</a></li>
+                      <li class="menu-item"><a href="projects.html" class="menu-link">Projects</a></li>
+                   </ul>
+                </div>
+                <a href="index.html#contact" class="menu-block">Get In Touch</a>
+             </nav>
+        </div>
+     </header>
+     <section class="sub-hero">
+        <div class="container">
+            <div class="caption">
+                <h2>My <span class="title-span">Projects</span> </h2>
+            </div>
+        </div>
+     </section>
+     <section class="project-section">
+         <div class="container">
+            <div class="row">
+               <div class="project-card">
+                  <h2>Overforce Consulting</h2>
+                  <p>Overforce, a scheduling and communications developmental
+                     company that aims to improve Vans scheduling and communication
+                     strategies. Our objective is to facilitate the process of rescheduling the
+                     work hours for the employees. <br><br>
+                     </p>
+                     <a target="_blank" href="https://drive.google.com/file/d/11of_C3e1VcDOkqljsmsGuEsIaRNqrImG/view?usp=sharing">View Project</a>
+               </div>
+               <div class="project-card">
+                  <h2>Tyco’s Accounting Scandal</h2>
+                  <p>Tyco International, one of the world’s largest security and fire
+                     services markets, faced a downfall as its CEO Dennis Kozlowski
+                     committed unethical business practices. Many discrepancies in Tyco’s
+                     financial statements and bank accounts were found. Kozlowski took large
+                     sums of money from the company</p>
+                     <a target="_blank" href="https://drive.google.com/file/d/1VccqphfPO0FaW6zt1MkoThALU2wFc6Hk/view">View Project</a>
+               </div>
+               <div class="project-card">
+                  <h2>Pharmaceutical Database Design Proposal</h2>
+                  <p>In a world becoming increasingly interconnected, the
+                     significance of a streamlined healthcare infrastructure cannot be
+                     emphasized enough. The COVID-19 pandemic has brought attention to
+                     the importance of prompt and precise local tracking of injections, and
+                     immunizations. We suggest establishing a real-time county-based
+                     database to track all accessible injections and immunizations in order to
+                     solve this pressing problem.
+                     </p>
+                     <a target="_blank" href="https://drive.google.com/file/d/1tZzbzFubEd79FKgSQo26WNSgYATaU9WM/view">View Project</a>
+               </div>
+               <div class="project-card">
+                  <h2>BullseyeBore Marketing Plan</h2>
+                  <p>BullseyeBore Core revolutionizes the drilling experience with
+                     its innovative power drill accessory designed to ensure straight and
+                     precise holes in any drilling scenario. With its patented technology and
+                     user-centric design, this product offers a seamless solution to a common
+                     problem faced by professionals and DIY enthusiasts worldwide. <br><br>
+                     </p>
+                     <a target="_blank" href="https://drive.google.com/file/d/1BtUEl0gOMRCRLE17LyoGX9LYhSPWOCys/view">View Project</a>
+               </div>
+               <div class="project-card">
+                  <h2>PrepPal Recipe System</h2>
+                  <p>Imagine the frustration while going through your pantry wondering what
+                     you can make, or searching online through countless recipes requiring
+                     ingredients you don’t have. PrepPal is a web application designed to help
+                     users pick out recipes based off of ingredients that they already have on
+                     hand.</p>
+                     <a target="_blank" href="https://drive.google.com/file/d/1OZc5cWy4ygFXJvrpLm2MO1k6ej-U45fd/view">View Project</a>
+               </div>
+
+            </div>
+         </div>
+     </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="copyright">
+                    <p> © 2024 Thomas | All rights reserved.</p>
+                </div>
+                <div class="social-icon">
+                    <div class="item">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <div class="item">
+                        <a href="https://www.linkedin.com/in/thomas-tran-6a4b08270"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+
+
+     <script>
+        const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const headerMenu = document.getElementById("header");
+
+
+if (burgerMenu && navbarMenu) {
+   burgerMenu.addEventListener("click", () => {
+      burgerMenu.classList.toggle("is-active");
+      navbarMenu.classList.toggle("is-active");
+   });
+}
+
+
+document.querySelectorAll(".menu-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      burgerMenu.classList.remove("is-active");
+      navbarMenu.classList.remove("is-active");
+   });
+});
+
+
+window.addEventListener("scroll", () => {
+   if (this.scrollY >= 85) {
+      headerMenu.classList.add("on-scroll");
+   } else {
+      headerMenu.classList.remove("on-scroll");
+   }
+});
+
+
+window.addEventListener("resize", () => {
+   if (window.innerWidth > 768) {
+      if (navbarMenu.classList.contains("is-active")) {
+         navbarMenu.classList.remove("is-active");
+      }
+   }
+});
+
+     </script>
+</body>
+</html>
